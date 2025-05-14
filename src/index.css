@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+@layer utilities {
+    .animate-breathe {
+        animation: breathe 3s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+        0%, 100% {
+            opacity: 0.85;
+            transform: scale(1);
+            filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.5)); /* слабое золото */
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.9)); /* яркое золото */
+        }
+    }
+}
